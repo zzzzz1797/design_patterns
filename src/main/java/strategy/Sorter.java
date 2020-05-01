@@ -1,4 +1,4 @@
-package strategy.comparable;
+package strategy;
 
 import java.util.Comparator;
 

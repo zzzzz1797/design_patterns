@@ -1,4 +1,4 @@
-package strategy.comparator;
+package strategy;
 
 import java.util.Comparator;
 
@@ -6,7 +6,7 @@ import java.util.Comparator;
  * @author z
  * @date 2020-05-01 00:44
  */
-public class Sorter<T> {
+public class NewSorter<T> {
 
     public void sorter(T[] arr, Comparator<T> comparator) {
         for (int i = 0; i < arr.length; i++) {
