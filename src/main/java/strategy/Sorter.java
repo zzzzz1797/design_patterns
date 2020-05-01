@@ -1,10 +1,16 @@
-package strategy;
+package strategy.comparable;
+
+import java.util.Comparator;
 
 /**
  * @author z
  * @date 2020-05-01 00:15
  */
 public class Sorter {
+
+    /**
+     * @param arr 这样写虽然，可以输入不同的参数使用同一方法进行排序，但是真正的compareTo是事先写好的，这样比较呆板，扩展性不强，不算是真正的策略模式。
+     */
     public static void sort(Comparable[] arr) {
         for (int i = 0; i < arr.length; i++) {
             int minPos = i;
@@ -22,4 +28,5 @@ public class Sorter {
         arr[index1] = arr[index2];
         arr[index2] = tmpElement;
     }
+
 }
