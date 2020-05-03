@@ -3,6 +3,7 @@ import strategy.*;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.SortedSet;
 
 /**
  * @author z
@@ -41,5 +42,20 @@ public class StrategyTest {
         NewSorter<Person> personNewSorter = new NewSorter<>();
         personNewSorter.sorter(people, new PersonNameComparator());
         System.out.println(Arrays.asList(people));
+    }
+
+    @Test
+    public void personNewSortWithNameLambda() {
+        System.out.println(Arrays.asList(people));
+
+        NewSorter<Person> personNewSorter = new NewSorter<Person>();
+        personNewSorter.sorter(people, (o1, o2) -> {
+            if (o1.getAge() > o1.getAge()) return 1;
+            else if (o1.getAge() < o2.getAge()) return -1;
+            else return 0;
+        });
+
+        System.out.println(Arrays.asList(people));
+
     }
 }
